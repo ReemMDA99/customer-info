@@ -30,7 +30,7 @@ const CustomerList = () => {
   //Return customer form table
   return (
     <div className="table-wrapper">
-      <Table>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Name</th>
