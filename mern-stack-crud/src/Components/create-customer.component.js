@@ -12,8 +12,10 @@ import CustomerForm from "./CustomerForm";
 //create customer component
 const CreateCustomer = () => {
     const [formValues, setFormValues] =
-     useState({name:'', id:'', email:'', location:''})
-     
+    useState({
+        name:'', id:'', email:'', location:''
+    });
+    
     // onSubmit event handler
     const onSubmit = customerObject => {
         axios.post(
