@@ -1,8 +1,29 @@
-// import bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './logo.svg';
-import './App.css';
 
+// Import React
+import React from "react";
+  
+// Import Bootstrap
+import { Nav, Navbar, Container, Row, Col } from "react-bootstrap";
+
+// Import React-bootstrap
+import "bootstrap/dist/css/bootstrap.css";
+  
+// Import Custom CSS
+import "./App.css";
+  
+// Import from react-router-dom
+import { BrowserRouter as Router, Switch,
+    Route, Link } from "react-router-dom";
+  
+// Import other React Component
+
+import CreateCustomer from "./Components/CreateCustomer";
+import EditCustomer from "./Components/EditCustomer";
+import CustomerList from "./Components/CustomerList";
+import CustomerForm from "./Components/CustomerForm";
+import CustomerTableRow from "./Components/CustomerTableRow";
+
+// App Component
 function App() {
   return (
     <div className="App">
