@@ -5,7 +5,7 @@ import * as Yup from "yup";
 // Import Formik to build form in React
 import { Formik, Form, Field, ErrorMessage } from "formik";
 // Import form components from react-bootstrap
-import { FormGroup } from "react-bootstrap"; 
+import { FormGroup, Button } from "react-bootstrap"; 
 
 // create customer form with name, id, email and location properties and client side validation using Yup
 const CustomerForm = (props) => {
@@ -20,25 +20,35 @@ return (
     <div className="form-wrapper">
         <Formik {...props} validationSchema={validationSchema}>
             <Form>
+                {/* form group for name field */}
                 <FormGroup>
                     <Field name="name" type="text" className="form-control"/>
                     <ErrorMessage name="name" className="d-block invalid-feedback" component="span"/>
                 </FormGroup>
+                {/* form group for id field */}
                 <FormGroup>
                     <Field name="id" type="number" className="form-control" />
                     <ErrorMessage name="id"className="d-block invalid-feedback" component="span"/>
                 </FormGroup>
+                {/* form group for email field */}
                 <FormGroup>
                     <Field name="email" type="text" className="form-control" />
                     <ErrorMessage name="email" className="d-block invalid-feedback" component="span"/>
                 </FormGroup>
+                {/* form group for location field */}
                 <FormGroup>
                     <Field name="location" type="text" className="form-control"/>
                     <ErrorMessage name="location" className="d-block invalid-feedback" component="span"/>
                 </FormGroup>
+                {/* Add button by importing from react bootstrap */}
+                <Button variant="danger" size="lg" block="block" type="submit">
+                    {props.children}
+                </Button>
             </Form>
         </Formik>
     </div>
 );
 
 };
+// export the CustomerForm component 
+export default CustomerForm;
