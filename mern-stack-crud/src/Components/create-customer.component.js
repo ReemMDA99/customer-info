@@ -15,7 +15,7 @@ const CreateCustomer = () => {
     useState({
         name:'', id:'', email:'', location:''
     });
-    
+
     // onSubmit event handler
     const onSubmit = customerObject => {
         axios.post(
@@ -41,8 +41,8 @@ const CreateCustomer = () => {
         enableReinitialize>
       Create Customer
     </CustomerForm>
-  )
-}
+  );
+};
 
 
 //export this component

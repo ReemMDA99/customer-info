@@ -45,8 +45,19 @@ const EditCustomer = (props) => {
         })
         .catch((error) => console.log(error));
     }, []);
-}
-//Return customer form
+
+    //Return customer form
+    return(
+        <CustomerForm 
+            initialValues={formValues} 
+            onSubmit={onSubmit} 
+            // The enableReinitialize prop resets form only if initialValues is changed
+            enableReinitialize>
+          Update Customer
+        </CustomerForm>
+    );
+
+};
 
 // Export edit-customer Component
 export default EditCustomer;
