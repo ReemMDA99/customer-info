@@ -46,4 +46,4 @@ const CreateCustomer = () => {
 
 
 //export this component
-export default CreateCustomer
+export default CreateCustomer;
