@@ -9,7 +9,8 @@ import axios from "axios";
 
 // create customer-table-row component
 const CustomerTableRow = (props) => {
-  const { name, _id, email, location } = props.obj;
+  const { _id, name, email, location } = 
+    props.obj;
   // add delete customer by id functionality
   const deleteCustomer = () => {
     axios
@@ -35,7 +36,7 @@ const CustomerTableRow = (props) => {
       <td>{location}</td>
       <td>
         {/* edit customer by id */}
-        <Link className="edit-link" 
+        <Link className= "edit-link" 
           to={"/edit-customer/" + _id}>
           Edit
         </Link>

@@ -34,8 +34,8 @@ const CustomerList = () => {
         <thead>
           <tr>
             <th>Name</th>
-            <th>ID</th>
-            <th>email</th>
+            {/* <th>ID</th> */}
+            <th>Email</th>
             <th>Location</th>
           </tr>
         </thead>

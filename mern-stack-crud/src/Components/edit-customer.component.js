@@ -10,7 +10,7 @@ import CustomerForm from "./CustomerForm";
 const EditCustomer = (props) => {
     const[formValues, setFormValues] = 
     useState({
-        name:'', id:'', email:'', location:''
+        name:'', email:'', location:''
     });
     
     // onSubmit event handler
@@ -35,13 +35,12 @@ const EditCustomer = (props) => {
     // Load data from server and reinitialize customer form
     useEffect(() => {
         axios.get(
-            "http://localhost:4000/customers/update-customer/" +
-            props.match.params.id
+            "http://localhost:4000/customers/update-customer/" + props.match.params.id
         )
         .then((response) => {
-            const { name , id, email, location } = 
+            const { name , email, location } = 
             response.data;
-            setFormValues({ name , id, email, location });
+            setFormValues({ name , email, location });
         })
         .catch((error) => console.log(error));
     }, []);

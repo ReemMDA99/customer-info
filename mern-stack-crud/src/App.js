@@ -1,4 +1,3 @@
-
 // Import React
 import React from "react";
   
@@ -16,9 +15,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
   
 // Import other React Component
 
-import CreateCustomer from "./Components/CreateCustomer";
-import EditCustomer from "./Components/EditCustomer";
-import CustomerList from "./Components/CustomerList";
+import CreateCustomer from "./Components/create-customer.component";
+import EditCustomer from "./Components/edit-customer.component";
+import CustomerList from "./Components/customer-list.component";
 import CustomerForm from "./Components/CustomerForm";
 import CustomerTableRow from "./Components/CustomerTableRow";
 
@@ -62,11 +61,11 @@ const App = () => {
                 <Routes>
                   <Route exact path="/"
                   component={CreateCustomer}/>
-                  <Route path="/CreateCustomer"
+                  <Route path="/create-customer"
                   component={CreateCustomer}/>
-                  <Route path="/EditCustomer/:id"
+                  <Route path="/edit-customer/:id"
                   component={EditCustomer}/>
-                  <Route path="/CustomerList"
+                  <Route path="/customer-list"
                   component={CustomerList}/>
                 </Routes>
               </div>

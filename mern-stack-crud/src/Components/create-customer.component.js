@@ -13,7 +13,7 @@ import CustomerForm from "./CustomerForm";
 const CreateCustomer = () => {
     const [formValues, setFormValues] =
     useState({
-        name:'', id:'', email:'', location:''
+        name:'', email:'', location:''
     });
 
     // onSubmit event handler

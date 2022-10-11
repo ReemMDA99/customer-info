@@ -5,13 +5,13 @@ import * as Yup from "yup";
 // Import Formik to build form in React
 import { Formik, Form, Field, ErrorMessage } from "formik";
 // Import form components from react-bootstrap
-import { FormGroup, Button } from "react-bootstrap"; 
+import { FormGroup, FormControl, Button } from "react-bootstrap"; 
 
 // create customer form with name, id, email and location properties and client side validation using Yup
 const CustomerForm = (props) => {
     const validationSchema = Yup.object().shape({
         name: Yup.string().required("Mandatory Field"),
-        id: Yup.number().positive("Invalid ID").required("Mandatory Field"),
+        // id: Yup.number().positive("Invalid ID").required("Mandatory Field"),
         email: Yup.string().email("Invalid email address! Please try again").required("Required"),
         location: Yup.string().required("Mandatory Field"),
     });
@@ -25,11 +25,7 @@ return (
                     <Field name="name" type="text" className="form-control"/>
                     <ErrorMessage name="name" className="d-block invalid-feedback" component="span"/>
                 </FormGroup>
-                {/* form group for id field */}
-                <FormGroup>
-                    <Field name="id" type="number" className="form-control" />
-                    <ErrorMessage name="id"className="d-block invalid-feedback" component="span"/>
-                </FormGroup>
+                
                 {/* form group for email field */}
                 <FormGroup>
                     <Field name="email" type="text" className="form-control" />
