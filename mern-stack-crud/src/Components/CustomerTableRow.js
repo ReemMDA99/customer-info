@@ -30,7 +30,7 @@ const CustomerTableRow = (props) => {
   return (
     <tr>
       <td>{name}</td>
-      <td>{id}</td>
+      {/* <td>{id}</td> */}
       <td>{email}</td>
       <td>{location}</td>
       <td>

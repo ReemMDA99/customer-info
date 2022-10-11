@@ -12,8 +12,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
   
 // Import from react-router-dom
-import { BrowserRouter as Router, Switch,
-    Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
   
 // Import other React Component
 
@@ -45,7 +44,6 @@ const App = () => {
                     Create Customer
                   </Link>
                 </Nav>
-
                 <Nav>
                   <Link to={"/customer-list"} 
                     className="nav-link">
@@ -61,7 +59,7 @@ const App = () => {
           <Row>
             <Col md={12}>
               <div className="wrapper">
-                <Switch>
+                <Routes>
                   <Route exact path="/"
                   component={CreateCustomer}/>
                   <Route path="/CreateCustomer"
@@ -70,7 +68,7 @@ const App = () => {
                   component={EditCustomer}/>
                   <Route path="/CustomerList"
                   component={CustomerList}/>
-                </Switch>
+                </Routes>
               </div>
             </Col>
           </Row>
