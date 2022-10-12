@@ -6,6 +6,7 @@ import axios from "axios";
 // Import table from react-bootstrap library
 import { Table } from "react-bootstrap";
 import CustomerTableRow from "./CustomerTableRow";
+
  
 // create customer-list table component
 const CustomerList = () => {

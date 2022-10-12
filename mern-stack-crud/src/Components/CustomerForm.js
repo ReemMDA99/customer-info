@@ -6,14 +6,15 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 // Import form components from react-bootstrap
 import {  Button } from "react-bootstrap"; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // create customer form with name, id, email and location properties and client side validation using Yup
 const CustomerForm = (props) => {
     return (
      <div className='form-wrapper'>
-        <Formik
+        <Formik {...props}
          initialValues={{ name: '', email: '', location:'' }}
-            validationSchema={Yup.object({
+            validationSchema={Yup.object.shape({
              name: Yup.string()
              .max(15, 'Must be 15 characters or less')
              .required('Required'),
@@ -33,23 +34,23 @@ const CustomerForm = (props) => {
             }}
         >
             <Form>
-                 <label htmlFor="name">Name</label>
+                 {/* <label htmlFor="name">Name</label> */}
                  <Field name="name" type="text" className="form-control" />
                  <ErrorMessage name="name" className="d-block invalid-feedback" component="span"/>
          
-                 <label htmlFor="email">Email Address</label>
+                 {/* <label htmlFor="email">Email Address</label> */}
                  <Field name="email" type="email" className="form-control"/>
                  <ErrorMessage name="email" className="d-block invalid-feedback" component="span" />
  
-                 <label htmlFor="location">Location</label>
+                 {/* <label htmlFor="location">Location</label> */}
                  <Field name="location" type="text" className="form-control"/>
                  <ErrorMessage name="location" className="d-block invalid-feedback" component="span" />
          
                  <Button variant="danger" size="lg" block="block" type="submit">
                          {props.children}
                  </Button>
-             </Form>
-         </Formik>
+            </Form>
+        </Formik>
      </div>
     );
  };

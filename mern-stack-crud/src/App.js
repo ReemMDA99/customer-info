@@ -18,8 +18,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import CreateCustomer from "./Components/create-customer.component";
 import EditCustomer from "./Components/edit-customer.component";
 import CustomerList from "./Components/customer-list.component";
-import CustomerForm from "./Components/CustomerForm";
-import CustomerTableRow from "./Components/CustomerTableRow";
+// import CustomerForm from "./Components/CustomerForm";
+// import CustomerTableRow from "./Components/CustomerTableRow";
 
 // App Component
 const App = () => {

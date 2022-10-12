@@ -14,7 +14,7 @@ const CreateCustomer = () => {
     const [formValues, setFormValues] =
     useState({
         name:'', email:'', location:''
-    });
+    })
 
     // onSubmit event handler
     const onSubmit = customerObject => {
@@ -34,10 +34,8 @@ const CreateCustomer = () => {
     }
     // Return customer form
   return(
-    <CustomerForm 
-        initialValues={formValues} 
+    <CustomerForm initialValues={formValues} 
         onSubmit={onSubmit} 
-        // The enableReinitialize prop resets form only if initialValues is changed
         enableReinitialize>
       Create Customer
     </CustomerForm>
